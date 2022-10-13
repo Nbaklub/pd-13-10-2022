@@ -1,0 +1,23 @@
+﻿#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
+{
+    int kbhit(void);
+    int getch(void);
+    unsigned char znak;
+    cout << "klawisz [ESC] wychodzi z programu." << endl;
+    do
+    {
+        znak = getch();
+        cout << "znak: '" << znak << "' kod: " << static_cast <int>(znak) << endl;
+        while (kbhit())
+        {
+            znak = getch();
+            cout << "*znak: '" << znak << "' kod: " << static_cast <int>(znak) << endl;
+        }
+        cout << endl;
+    } while (znak != 27); //ESC
+
+    return(0);
+}
