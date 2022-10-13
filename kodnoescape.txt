@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int i;
+	char znak;
+	cout << "Podaj znak: ";
+	cin >> znak;
+	i = znak;
+
+	while (i < 256)
+	{
+		cout<<"Kod ASCII: "<< i << endl;
+		cout << "Podaj znak: ";
+		cin >> znak;
+		i = znak;
+	}
+}
